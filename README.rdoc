@@ -1,5 +1,18 @@
 == README
 
+RUBY VERSION
+- 2.3.0p0
+RAILS VERSION
+- 4.2.5
+
+Log
+27th March 2017
+Started making the application/ section 8 of the course.
+Initial commit of code and git repository established.
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
