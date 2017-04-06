@@ -2,6 +2,8 @@ class Stock < ActiveRecord::Base
   # these are class level methods below as we want to use them without having an 'instance of a stock'
   # they are just methods that are there to call upon as they are looked up/displayed not created then actioned
   # REMINDER - class level methods are def self.[method name]
+  has_many :user_stocks
+  has_many :users, through: :user_stocks
   
   def self.find_by_ticker(ticker_symbol)
     where(ticker: ticker_symbol).first
