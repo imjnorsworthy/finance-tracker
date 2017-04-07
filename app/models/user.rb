@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
   
+  def full_name
+    return "#{first_name} #{last_name}".strip if (first_name || last_name)
+    # if theres not a first name or last name then return...
+    "Anonymous"
+  end
+  
   def can_add_stock?(ticker_symbol)
     under_stock_limit? && !stock_already_added?(ticker_symbol)
   end
